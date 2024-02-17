@@ -3,12 +3,12 @@
 }
 .navbar{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
     
 }
 .main{
     text-align: left;
-    margin-left: 5%;
+    margin-left: 8%;
     padding-top: 1rem;
 }
 .container{

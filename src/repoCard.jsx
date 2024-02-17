@@ -4,6 +4,7 @@ import "./RepoCard.css"; // Import CSS file for styling
 export default function RepoCard({ data }) {
   const [languages, setLanguages] = useState({});
   const [currentPage, setCurrentPage] = useState(1);
+  
   const pageSize = 10;
 
   useEffect(() => {
@@ -43,6 +44,9 @@ export default function RepoCard({ data }) {
   const goToNextPage = () => {
     setCurrentPage((prevPage) => prevPage + 1);
   };
+  const goToPrevPage=()=>{
+    setCurrentPage ((prevPage) => prevPage -1);
+  };
 
   return (
     <div className="mainContainer">
@@ -61,8 +65,8 @@ export default function RepoCard({ data }) {
       ))}
     </div>
       <div className="pageList">
-        
-            <button onClick={goToNextPage}>Next</button>
+            <button onClick={goToPrevPage}>{"<<Prev"}</button>
+            <button onClick={goToNextPage}>{"Next>>"}</button>
       </div>
     </div>
     

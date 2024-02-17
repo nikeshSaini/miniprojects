@@ -15,9 +15,7 @@ export default function GithubSearch()  {
     let styles = {
         
         padding: '10px',
-        width: '99vw',
-        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
-
+        width: '100vw',
 
     };
     const handleChange =(e)=>{
@@ -32,8 +30,9 @@ export default function GithubSearch()  {
             setShowData(false);
             return;
         }
+        //till here i have checked whether it'll fetch or not
 
-        
+        setLoading(true); //now we know that user is fething somedat it maybe error 
 
         try {
             const res = await fetch(`https://api.github.com/users/${username}`);
@@ -48,13 +47,14 @@ export default function GithubSearch()  {
             
             setData(result);
             setlan(lanRes);
-            setInputError(inpError);
+            setInputError("");
             setShowData(true);
             
         } catch (err) {
-            setError(err.message);
+            setInputError(err.message);
         }finally {
             setLoading(false);
+            
         }
         
         
@@ -72,16 +72,15 @@ export default function GithubSearch()  {
                     <input type="text" name="username" id="" placeholder='Enter username' value={username} onChange={handleChange}/>
                     <button type='submit' onClick={searchClick}>Search</button>
                 </div>
+                {loading && <p>Loading...</p>}
+                { !loading && inpError ? <p>{inpError}</p>:null}
                 </div>
-                
                 <div>{ (showData && !loading) ? 
                 <>
                 <GithubRes data ={data} />
                 <RepoCard data ={lan}/>
                 </> :(
-                     <>
-                      <p>{inpError}</p>
-                    </>
+                     null
                 )}</div>
                 
                 

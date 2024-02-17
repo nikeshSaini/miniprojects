@@ -18,7 +18,7 @@
 
 .repoName {
     font-weight: bold;
-    color:rgb(42, 82, 137)
+    color:rgb(85, 125, 183)
 }
 
 .languages {
@@ -27,7 +27,7 @@
     gap: 5px;
 }
 .sLan{
-    background-color:rgb(42, 82, 137) ;
+    background-color:rgb(85, 125, 183) ;
     color: white;
     padding: 2px;
     border-radius: 0.2rem;

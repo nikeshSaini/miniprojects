@@ -65,11 +65,13 @@ export default function GithubSearch()  {
         
         <div style={styles}>
             <div className="gitSearch">
+                <div className="navbar">
                 <h3>GitHub User Search</h3>
                 <div className='inputBar'>
                     
                     <input type="text" name="username" id="" placeholder='Enter username' value={username} onChange={handleChange}/>
                     <button type='submit' onClick={searchClick}>Search</button>
+                </div>
                 </div>
                 
                 <div>{ (showData && !loading) ? 

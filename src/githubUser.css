@@ -1,13 +1,19 @@
 #dp{
     border-radius: 50%;
 }
-.main > p{
+.navbar{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding-bottom: 3rem;
+    
+}
+.main{
     text-align: left;
-    margin-left: 10%;
+    margin-left: 5%;
+    padding-top: 1rem;
 }
 .container{
     display: flex;
-    margin-left: 5%;
+    
     margin-top: 2%;
 
 }
@@ -16,7 +22,7 @@
 }
 .secondcontainer{
     text-align: left;
-    margin-left: 2rem;
+    margin-left: 5%;
 }
 .inputBar >input{
     width: 40%;

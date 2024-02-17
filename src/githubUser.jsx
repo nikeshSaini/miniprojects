@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import GithubRes from './githubRes';
 import RepoCard from './repoCard';
+import "./githubUser.css"
 
 
 export default function GithubSearch()  {
@@ -12,9 +13,11 @@ export default function GithubSearch()  {
     const [inpError, setInputError] =useState("");
 
     let styles = {
-        border: '1px solid black',
+        
         padding: '10px',
         width: '99vw',
+        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+
 
     };
     const handleChange =(e)=>{
@@ -63,11 +66,12 @@ export default function GithubSearch()  {
         <div style={styles}>
             <div className="gitSearch">
                 <h3>GitHub User Search</h3>
-                <div style={{ display: 'inline' }}>
+                <div className='inputBar'>
                     
                     <input type="text" name="username" id="" placeholder='Enter username' value={username} onChange={handleChange}/>
                     <button type='submit' onClick={searchClick}>Search</button>
                 </div>
+                
                 <div>{ (showData && !loading) ? 
                 <>
                 <GithubRes data ={data} />

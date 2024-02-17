@@ -19,6 +19,7 @@ export default function GithubRes({data}){
             <div className="secondcontainer">
             <p>{data.name}</p>
             <p>{data.bio}</p>
+            <p>{data.location}</p>
             </div>
         </div>
         <p>{data.html_url}</p>

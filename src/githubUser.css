@@ -11,8 +11,8 @@
     margin-top: 2%;
 
 }
-.searchbar{
-    width: 50%;
+.gitsearch{
+    width: 100%;
 }
 .secondcontainer{
     text-align: left;
@@ -31,6 +31,6 @@
 .inputBar button{
     margin-left: 1rem;
     border: 1px solid black;
-    line-height: 0.9;
+    line-height: 0.8;
     
 }

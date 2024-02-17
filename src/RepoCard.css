@@ -1,16 +1,19 @@
 .repoContainer {
     margin-top: 2rem;
     display: flex;
+    
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center
     
 }
 
 .repoCard {
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 10px;
+    padding-left: 1rem;
     width: 40%;
+    text-align: left;
 }
 
 .repoName {
@@ -19,12 +22,9 @@
 }
 
 .languages {
-    margin-top: 5px;
-    margin-left: 15px;
-    display: flex;
-    gap: 5px;
     display: flex;
     flex-wrap: wrap;
+    gap: 5px;
 }
 .sLan{
     background-color:rgb(42, 82, 137) ;

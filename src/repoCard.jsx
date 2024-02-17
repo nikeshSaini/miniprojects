@@ -3,6 +3,8 @@ import "./RepoCard.css"; // Import CSS file for styling
 
 export default function RepoCard({ data }) {
   const [languages, setLanguages] = useState({});
+  const [currentPage, setCurrentPage] = useState(1);
+  const pageSize = 10;
 
   useEffect(() => {
     const fetchLanguages = async (repoName) => {
@@ -27,15 +29,25 @@ export default function RepoCard({ data }) {
       }
     };
 
-    // Fetch languages data for each repository when the component mounts or data changes
-    data.forEach((item) => {
+    // Calculate the start index for the current page
+    const startIndex = (currentPage - 1) * pageSize;
+    // Slice the data array to get only the items for the current page
+    const currentPageData = data.slice(startIndex, startIndex + pageSize);
+
+    // Fetch languages data for repositories on the current page
+    currentPageData.forEach((item) => {
       fetchLanguages(item.name);
     });
-  }, [data]);
+  }, [data, currentPage]);
+
+  const goToNextPage = () => {
+    setCurrentPage((prevPage) => prevPage + 1);
+  };
 
   return (
-    <div className="repoContainer">
-      {data.map((item) => (
+    <div className="mainContainer">
+      <div className="repoContainer">
+      {data.slice((currentPage - 1) * pageSize, currentPage * pageSize).map((item) => (
         <div key={item.id} className="repoCard">
           <p className="repoName">{item.name}</p>
           <p className="repoDesc">{item.description} </p>
@@ -48,5 +60,11 @@ export default function RepoCard({ data }) {
         </div>
       ))}
     </div>
+      <div className="pageList">
+        
+            <button onClick={goToNextPage}>Next</button>
+      </div>
+    </div>
+    
   );
 }

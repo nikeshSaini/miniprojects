@@ -1,0 +1,36 @@
+#dp{
+    border-radius: 50%;
+}
+.main > p{
+    text-align: left;
+    margin-left: 10%;
+}
+.container{
+    display: flex;
+    margin-left: 5%;
+    margin-top: 2%;
+
+}
+.searchbar{
+    width: 50%;
+}
+.secondcontainer{
+    text-align: left;
+    margin-left: 2rem;
+}
+.inputBar >input{
+    width: 40%;
+    line-height: 2;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid black;
+    padding-left: 10px;
+    
+}
+
+.inputBar button{
+    margin-left: 1rem;
+    border: 1px solid black;
+    line-height: 0.9;
+    
+}

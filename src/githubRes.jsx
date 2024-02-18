@@ -20,9 +20,10 @@ export default function GithubRes({data}){
                     <p>{data.name}</p>
                     <p> {data.bio}</p>
                     <p>📍{data.location}</p>
+                    <p>🕊️{data.twitter_username}</p>
                 </div>
             </div>
-            <p>{data.html_url}</p>
+            <p>🔗<a onClick={goTo}>{data.html_url}</a></p>
         </div>
     );
 }

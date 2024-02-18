@@ -5,7 +5,7 @@ export default function RepoCard({ data }) {
   const [languages, setLanguages] = useState({});
   const [currentPage, setCurrentPage] = useState(1);
   
-  const pageSize = 10;
+  const pageSize = 6;
 
   useEffect(() => {
     const fetchLanguages = async (repoName) => {

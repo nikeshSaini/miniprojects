@@ -39,7 +39,8 @@ export default function GithubSearch()  {
             const res2 = await fetch(`https://api.github.com/users/${username}/repos`);
 
             if (!res.ok) {
-                throw new Error(`${res.status} ${res.statusText}: No user found!`);
+                const ans = await res.json();
+                throw new Error(`${ans.message} ${res.status} : No user found!`);
             }
 
             const result = await res.json();
@@ -75,7 +76,7 @@ export default function GithubSearch()  {
                 {loading && <p>Loading...</p>}
                 { !loading && inpError ? <p>{inpError}</p>:null}
                 </div>
-                <div>{ (showData && !loading) ? 
+                <div>{ (showData && !loading && !inpError) ? 
                 <>
                 <GithubRes data ={data} />
                 <RepoCard data ={lan}/>

@@ -6,6 +6,8 @@
     padding-bottom: 1rem;
     
 }
+
+
 .main{
     text-align: left;
     margin-left: 8%;
@@ -16,6 +18,9 @@
     
     margin-top: 2%;
 
+}
+.container a{
+    cursor: pointer;
 }
 .gitsearch{
     width: 100%;
@@ -39,4 +44,14 @@
     border: 1px solid black;
     line-height: 0.8;
     
+}
+
+#profileBtn{
+
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px; /* Adjust font size as needed */
+    color: black; /* Set text color */
+    cursor: pointer;
 }

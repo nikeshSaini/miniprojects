@@ -1,0 +1,41 @@
+.form_section{
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    margin: 0 auto;
+}
+.button_section{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;  
+}
+.button_section form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.button_part1{
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.form_control{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.form_control input{
+    height: 40PX;
+    padding: 0px 8px;
+}
+.form_control label{
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    background: white;
+    padding: 0px 10px;
+    font-size: 14px;
+}

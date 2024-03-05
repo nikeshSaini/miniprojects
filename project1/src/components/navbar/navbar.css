@@ -1,0 +1,28 @@
+.navbar-container{
+    display: flex;
+    height:72px ;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+.nav-items ul{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+
+
+}
+
+.nav-items ul li{
+    list-style-type: none;
+
+}
+
+.login-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 31px;
+    width: 75px;
+    background-color: #D01C28;
+}

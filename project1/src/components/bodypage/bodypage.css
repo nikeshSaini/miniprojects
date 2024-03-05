@@ -1,0 +1,42 @@
+.body-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 300px;
+}
+.hero-content, .hero-image{
+    flex: 1;
+    margin: 0;
+    margin: 0px 50px;
+}
+.hero-content h1{
+    font-weight: 800;
+    line-height: 102px;
+    font-size: 108px;
+}
+
+.hero-content p{
+    font-weight: 600;
+    line-height: 1;
+}
+.hero-btn{
+    display: flex;
+    width: 331px;
+    height: 41px;
+    gap: 40px;
+}
+button{
+    background: #D01C28;
+    outline: none;
+    border: none;
+    padding: 6px 16px;
+    color: white;
+    text-align: center;
+}
+.shoping-icon{
+    display: flex;
+    align-items: baseline;
+    justify-content: start;
+    gap: 20px;
+
+}
